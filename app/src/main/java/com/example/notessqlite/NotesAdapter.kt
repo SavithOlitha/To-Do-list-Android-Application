@@ -1,6 +1,6 @@
 package com.example.notessqlite
 
-import android.annotation.SuppressLint
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -29,7 +29,7 @@ class NotesAdapter (private var notes: List<Note>, context: Context): RecyclerVi
         holder.contentTextView.text = note.content
     }
 
-    //@SuppressLint("NotifyDataSetChanged")
+
     fun refreshData(newNotes: List<Note>){
         notes = newNotes
         notifyDataSetChanged()
