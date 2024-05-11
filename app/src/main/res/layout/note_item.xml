@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/light"
         android:orientation="vertical"
         android:padding="16dp">
 
@@ -36,14 +37,14 @@
                 android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="30dp"
-                android:src="@drawable/baseline_check_24"/>
+                android:src="@drawable/baseline_create_24"/>
 
             <ImageView
                 android:id="@+id/deleteButton"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/baseline_auto_delete_24"/>
+                android:src="@drawable/baseline_delete_outline_24"/>
 
         </RelativeLayout>
         

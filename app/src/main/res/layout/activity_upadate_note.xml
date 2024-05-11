@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightOrange"
     tools:context=".UpdateNoteActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
+        android:layout_marginStart="18dp"
         android:text="Edit Note"
         android:textColor="@color/Orange"
         android:textSize="24sp" />
@@ -24,7 +26,7 @@
         android:src="@drawable/baseline_check_24"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@id/editNoteHeading"
-        android:layout_marginEnd="6dp"/>
+        android:layout_marginEnd="16dp"/>
 
     <EditText
         android:id="@+id/updateTitleEditText"
@@ -35,6 +37,7 @@
         android:textSize="20sp"
         android:layout_below="@+id/editNoteHeading"
         android:background="@drawable/orange_border"
+        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:maxLines="1"
         android:fontFamily="@font/poppins"/>
@@ -48,6 +51,8 @@
         android:padding="12dp"
         android:textSize="18sp"
         android:fontFamily="@font/poppins"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
         android:layout_below="@+id/updateTitleEditText"
         android:background="@drawable/orange_border"
         android:layout_marginTop="12dp"/>

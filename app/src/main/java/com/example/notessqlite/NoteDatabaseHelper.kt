@@ -91,4 +91,24 @@ class NoteDatabaseHelper (context: Context) : SQLiteOpenHelper(context, DATABASE
         db.delete(TABLE_NAME, whereClause, whereArgs)
         db.close()
     }
+
+    fun searchNotesByTitle(query: String): List<Note> {
+        val noteList = mutableListOf<Note>()
+        val db = readableDatabase
+        val searchQuery = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_TITLE LIKE '%$query%'"
+        val cursor = db.rawQuery(searchQuery, null)
+
+        while (cursor.moveToNext()) {
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow(COLUMN_ID))
+            val title = cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TITLE))
+            val content = cursor.getString(cursor.getColumnIndexOrThrow(COlUMN_CONTENT))
+
+            val note = Note(id, title, content)
+            noteList.add(note)
+        }
+        cursor.close()
+        db.close()
+        return noteList
+    }
+
 }
